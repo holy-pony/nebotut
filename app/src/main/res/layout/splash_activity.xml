@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.jmedeisis.windowview.WindowView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tiltView"
+        app:orientation_mode="Relative"
+        app:translate_mode="Constant"
+        app:max_constant_translation="100dp"
+        app:sensor_sampling_period="fast"
+        app:max_pitch="15"
+        app:max_roll="15"
+        app:vertical_origin="0"
+        app:horizontal_origin="0"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:alpha=".8">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logoView"
+            android:layout_centerInParent="true"
+            android:src="@drawable/logo" />
+    </RelativeLayout>
+</RelativeLayout>
