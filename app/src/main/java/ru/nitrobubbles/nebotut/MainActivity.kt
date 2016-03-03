@@ -1,5 +1,6 @@
 package ru.nitrobubbles.nebotut;
 
+import android.app.Fragment
 import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
@@ -8,6 +9,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+import ru.nitrobubbles.nebotut.fragments.trainingfragment.TrainingFragment
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -40,6 +42,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val id = item?.itemId;
         when (id) {
             R.id.call -> {
+
+            }
+            R.id.shedule -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, TrainingFragment()).commit()
             }
         }
         drawer.closeDrawer(GravityCompat.START);
